@@ -1,3 +1,4 @@
+import { House } from "./Models/House.js"
 import { Car } from "./Models/Car.js"
 import { Value } from "./Models/Value.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
@@ -6,9 +7,22 @@ import { loadState } from "./Utils/Store.js"
 
 class AppState extends EventEmitter {
   /** @type {import('./Models/Value').Value[]} */
-  values = loadState('values', [Value])
+  values = loadState("values", [Value])
 
+  // houses = [
+  //   new House(
+  //     "1974",
+  //     "Mid-Century Modern Single Family Home",
+  //     3,
+  //     2.5,
+  //     1400,
+  //     375000,
+  //     "Newly renovated mid-century modern home",
+  //     "https://rew-feed-images.global.ssl.fastly.net/imls/_cloud_media/property/residentialincome/98862307-1-835976ecc96808a93ea194115ae6c537-m.jpg"
+  //   ),
+  // ]
 
+  
   // cars = [
   //   new Car({ make: 'Dodge', model: 'Viper', year: 2002, price: 50000, description: 'Super sick car, goes fast and guzzles gas', color: '#000000', img: 'https://bringatrailer.com/wp-content/uploads/2021/09/2002_dodge_viper_1635345255dcf15fe44065556AB8777-FE18-4724-8C40-32A88E23CDA0.jpeg?fit=1657%2C1104' }),
   //   new Car({ make: 'Subaru', model: 'Baja', year: 2004, price: 2500, description: 'Baja fresh baby', color: '#dea44e', img: 'https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/02q4/267343/subaru-baja-photo-9829-s-original.jpg' }),
@@ -16,13 +30,12 @@ class AppState extends EventEmitter {
   // ]
 
   /** @type {import('./Models/Car').Car[]} */
-  cars = loadState('cars', [Car])
+  cars = loadState("cars", [Car])
 
   /** @type {import('./Models/Car').Car|null} */
   activeCar = null
 
-  userName = ''
-
+  userName = ""
 }
 
 export const appState = new Proxy(new AppState(), {
@@ -35,5 +48,5 @@ export const appState = new Proxy(new AppState(), {
     target[prop] = value
     target.emit(prop, value)
     return true
-  }
+  },
 })
