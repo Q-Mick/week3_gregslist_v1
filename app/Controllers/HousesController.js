@@ -8,11 +8,11 @@ import { setHTML } from "../Utils/Writer.js";
 function _drawHouses(){
   console.log('drawing houses');
   let houses = appState.houses
-  console.log(houses);
+  // console.log(houses);
 let template = ''
 // NOTE for each house in the houses draw a template
 houses.forEach(house => template += house.CardTemplate)
-console.log(template);
+// console.log(template);
 setHTML('houses', template)
 }
 function _drawCreateHouseButton() {

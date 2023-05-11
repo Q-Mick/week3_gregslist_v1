@@ -87,7 +87,7 @@ export class House {
         return `<div class="col-2 pt-3">
         <button ${appState.userName != '' ? '' : 'disabled'}  onclick="app.carsController.getHouseForm()" data-bs-toggle="modal" data-bs-target="#modal"
           class="btn btn-info p-2"><i class="mdi mdi-home pe-3"></i>List
-          Car</button>
+          House</button>
       </div>`
     }
 }
