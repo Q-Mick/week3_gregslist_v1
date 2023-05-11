@@ -10,7 +10,7 @@ class App {
 
   userController = new UserController();
 
-  houseController = new HousesController();
+  housesController = new HousesController();
 
 }
 

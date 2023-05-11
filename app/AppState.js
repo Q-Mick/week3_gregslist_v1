@@ -9,18 +9,28 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Value').Value[]} */
   values = loadState("values", [Value])
 
-  // houses = [
-  //   new House(
-  //     "1974",
-  //     "Mid-Century Modern Single Family Home",
-  //     3,
-  //     2.5,
-  //     1400,
-  //     375000,
-  //     "Newly renovated mid-century modern home",
-  //     "https://rew-feed-images.global.ssl.fastly.net/imls/_cloud_media/property/residentialincome/98862307-1-835976ecc96808a93ea194115ae6c537-m.jpg"
-  //   ),
-  // ]
+  houses = [
+    new House({
+      year: "1974",
+      name: "Mid-Century Modern Single Family Home",
+      bedroom: 3,
+      bathroom: 2.5,
+      sqft: 1400,
+      price: 375000,
+      description: "Newly renovated mid-century modern home",
+      imgUrl: "https://rew-feed-images.global.ssl.fastly.net/imls/_cloud_media/property/residentialincome/98862307-1-835976ecc96808a93ea194115ae6c537-m.jpg"
+    }),
+    new House({
+      year: "1992",
+      name: "Mid-Century Modern Single Family Home",
+      bedroom: 3,
+      bathroom: 2.5,
+      sqft: 1400,
+      price: 375000,
+      description: "Newly renovated mid-century modern home",
+      imgUrl: "https://rew-feed-images.global.ssl.fastly.net/imls/_cloud_media/property/residentialincome/98862307-1-835976ecc96808a93ea194115ae6c537-m.jpg"
+    })
+  ]
 
   
   // cars = [
@@ -35,7 +45,10 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Car').Car|null} */
   activeCar = null
 
-  userName = ""
+//   @type {import('./Models/House').House[]} */
+//   cars = loadState("house", [House])
+  userName = "Quentin"
+// 
 }
 
 export const appState = new Proxy(new AppState(), {

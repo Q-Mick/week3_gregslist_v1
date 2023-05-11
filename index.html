@@ -23,7 +23,7 @@
       </div>
       <div class="col-8 text-center">
         <button class="btn btn-dark text-light" onclick="app.carsController.getCars()">Cars</button>
-        <button class="btn btn-dark text-light mx-5">Houses</button>
+        <button class="btn btn-dark text-light mx-5" onclick="app.housesController.getHouses()">Houses</button>
         <button class="btn btn-dark text-light">Jobs</button>
       </div>
       <div class="col-2 text-end">
@@ -42,10 +42,31 @@
           Car</button>
       </div> -->
     </section>
-
+    <section class="row" id="createHouseButton">
+      <!-- STUB car btn -->
+      <!-- <div class="col-2 pt-3">
+        <button onclick="app.HouseController.getHouseForm()" data-bs-toggle="modal" data-bs-target="#modal"
+          class="btn btn-info p-2"><i class="mdi mdi-home pe-3"></i>List
+          Car</button>
+      </div> -->
+    </section>
     <!-- NOTE rows are typically always your 'parent container' and where you will put the id for draws -->
     <section class="row pt-4" id="cars">
       <!-- STUB car template -->
+      <!-- <div class="col-md-4 col-12">
+        <div class="rounded elevation-5">
+          <img class="img-fluid rounded-top"
+            src="https://bringatrailer.com/wp-content/uploads/2021/09/2002_dodge_viper_1635345255dcf15fe44065556AB8777-FE18-4724-8C40-32A88E23CDA0.jpeg?fit=1657%2C1104"
+            alt="">
+          <div class="d-flex justify-content-between px-2">
+            <p>Dodge Viper</p>
+            <p>$50000</p>
+          </div>
+        </div>
+      </div> -->
+    </section>
+    <!-- section do display my house data -->
+    <section class="row" id="houses">
       <!-- <div class="col-md-4 col-12">
         <div class="rounded elevation-5">
           <img class="img-fluid rounded-top"
